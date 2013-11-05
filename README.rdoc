@@ -1,0 +1,32 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+I suggest I explain what I did and demonstrate but here is also how and what I used to make this project work
+
+Things you may want to cover:
+
+* Ruby version - ruby 1.9.3p448 (2013-06-27 revision 41675)
+
+* Rails version - Rails 4.0.0 The latest today
+
+* System dependencies
+
+* Configuration
+
+* Database creation - mysql db:sulake_development (see database.yml at /config for more)
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.

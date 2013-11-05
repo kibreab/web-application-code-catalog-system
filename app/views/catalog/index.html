@@ -1,0 +1,9 @@
+<!-- Main index view. This file renders two partials one for listing books(list_item.html) and one for adding(add_item.html) -->
+<%= stylesheet_link_tag "catalog" %>
+<%= javascript_include_tag 'jquery', 'application' %>
+
+<div class="body_container">
+	<h1>Catalog<span class='letter_r'>r</span></h1>
+	<%= render :partial => 'list_item', :object => @list %>
+	<%= render "add_item" %>
+</div>

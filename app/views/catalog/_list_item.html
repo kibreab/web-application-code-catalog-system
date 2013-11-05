@@ -1,0 +1,57 @@
+<% @list.each do |item_title| %>
+
+	<div style="padding-top:10;">
+		<div id="" style="width:40%;">
+			<img src="<%= item_title.coverpic.url %>" alt="" />
+		</div>
+
+		<div style="width:86%;float:right;margin-top:-94;">
+			<%= item_title.title %>
+			<% favourited = (item_title.favourite == true) %>
+			<!-- When page refreshes or opens, items are refined here weather or not they are favourites -->
+				<div id="<%= item_title.id %>_div" class="favourite_item" style="display:<%= favourited ? "block" : "none" %>;"><%= "Favorite item" %></div>
+				<a id="<%= item_title.id %>" style = "display:<%= favourited ? "none" : "block" %>" href><%= "Mark as favorite" %></a>
+
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+
+<% end %>
+
+<!-- New item to be populated here -->
+
+<div style="padding-top:10;">
+	<div class="image_append" style="width:10%;">
+	</div>
+
+	<div class="title_container" >
+		<div class="title_append"></div>
+		<div class="fav_info"%></div>
+		<a class="fav_link" href=""></a>
+	</div>
+</div>
+
+<!-- Below is a JQuery code to perform favouriting an item with ajax call.(Didn't need to call another js file for simplicity since it's a small code -->
+
+<script>
+$(document).ready(function(){
+
+  $("a").click(function(event){
+  	event.preventDefault();
+  	var obj=event.target.id; //we need ID to send to controller via ajax request
+
+    $.ajax({
+  	url:"catalog/update_favourite",
+  	data: {id:obj},
+  	contentType: 'application/json; charset=utf-8',
+    //type: 'POST',
+    //dataType: 'json',
+  	success:function(response){	
+  		//After favourite item is clicked here we hide the link and show the favourited message
+  		$("a#"+obj).hide();
+  		$("div#"+obj+"_div").show();
+	  }});
+
+  });
+});
+</script>

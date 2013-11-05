@@ -1,0 +1,56 @@
+.body_container{
+	font-family:"Arial",Georgia,Serif;
+	font-size: 13px;
+	padding: 0 100 10 300;
+}
+h1{
+	color:blue;
+}
+h2{
+	font-family:"Arial",Georgia,Serif;
+}
+.letter_r{
+	color:red;
+}
+.item_field_box{
+	background-color: #E8E8E8;
+	border: 5px solid #C8C8C8;
+	padding: 10;
+	max-width: 500px;
+	/*letter-spacing:1px;*/
+}
+.button{
+	text-align: right;
+}
+a{	
+	font-size: 13;
+	padding: 12 0 12 0;
+}
+img{
+	border: 5px solid #C8C8C8;max-width: 70px;
+}
+.title_container{
+	width:86%;
+	float:right;
+	margin-top: -94;
+	padding-top:10;
+}
+#save_button{
+	float: right;
+}
+.favourite_item{
+	background-color: #9F1616;
+	font-family:"Arial",Georgia,Serif;
+	font-size: 13px;
+	color:#fff;
+	padding: 3px;
+	border-radius: 5px;
+	max-width: 80px;
+
+}
+.validation_message{
+	background-color:red;color:white;padding:10;font-size: 12px;text-align: center;
+}
+.fav_link{
+	max-width: 80px;
+}

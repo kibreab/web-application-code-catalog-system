@@ -1,0 +1,64 @@
+<h2><%= 'Add an item' %></h2>
+
+<div class="item_field_box">
+  <div class="validation_message" style="display:none;">
+   Please fill in the required field 
+  </div>
+<%= form_for :book, :url => {:action => 'create'}, :html => { :multipart => true } do |form| %>
+  
+    <div style="float:right;">
+      <label>Title:<%= form.text_field :title , :size => 70 %></label>
+    </div>
+    <div style="float:right;">
+      <label>Image URL:<%= form.text_field :coverurl, :id => 'img_url', :size => 70 %></label>
+    </div>
+
+<% end %>
+  <div style="clear:both;"></div>
+  <div id="save_button"><%= button_tag "save" %></div>
+  <div style="clear:both;"></div>
+
+</div>
+
+<!-- Below is JQuery code to perform ajax call for adding a new item. No need to create a new js file for simplicity as this is not a big javascript code -->
+
+<script>
+$(document).ready(function(){
+function validateForm(){
+  var title = $('#book_title').val();
+  var img_url = $('#img_url').val();
+  if (title == "" || img_url == "") {
+  $('.validation_message').fadeIn().delay(2000).fadeOut();
+    return false;
+  }
+  else{
+    return true;
+  }
+}
+
+$(":button").click(function(){
+  if (validateForm() == true) { 
+  $.ajax({
+  	url:"catalog/create",
+  	data: {title:$('#book_title').val(),coverpic:$('#img_url').val()},
+  	contentType: 'application/json; charset=utf-8',
+    //type: 'POST',
+    //dataType: 'json',
+  	success:function(response){
+  		var result = response.book
+  		var id = result['id'];
+  		var title = result['title'];
+  		var url = result['coverpic']['url'];
+    	$(".image_append").append("<img src = "+url+">");
+    	$(".title_append").append(title);
+      $(".fav_link")
+      .append('Mark as favourite')
+      .attr('id', id);
+      $(".fav_info").addClass('favourite_item').append('Favorite item').attr('id', id+"_div").hide();
+  }});
+  	
+	};
+});
+
+});
+</script>
