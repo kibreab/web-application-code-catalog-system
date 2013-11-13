@@ -1,7 +1,13 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a web application for creating books with ajax and favouriting them 
+
+Technologies used to develop the application are
+- Ruby on Rails
+- Mysql
+- html
+- Jquery
+- Ajax
 
 I suggest I explain what I did and demonstrate but here is also how and what I used to make this project work
 
@@ -11,21 +17,8 @@ Things you may want to cover:
 
 * Rails version - Rails 4.0.0 The latest today
 
-* System dependencies
+* Database - mysql db:sulake_development (see database.yml at /config for more)
 
-* Configuration
-
-* Database creation - mysql db:sulake_development (see database.yml at /config for more)
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 
 Please feel free to use a different markup language if you do not plan to run
