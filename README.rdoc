@@ -1,6 +1,6 @@
 == README
 
-This is a web application for creating books with ajax and favouriting them 
+This is a web application developed by Kibreab Tekle Awono for creating books with ajax and favouriting them 
 
 Technologies used to develop the application are
 - Ruby on Rails
@@ -19,7 +19,5 @@ Things you may want to cover:
 
 * Database - mysql db:sulake_development (see database.yml at /config for more)
 
+For more information contact Kibreab @ +358466000614
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
