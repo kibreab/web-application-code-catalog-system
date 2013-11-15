@@ -11,13 +11,12 @@ Technologies used to develop the application are
 
 I suggest I explain what I did and demonstrate but here is also how and what I used to make this project work
 
-Things you may want to cover:
 
 * Ruby version - ruby 1.9.3p448 (2013-06-27 revision 41675)
 
 * Rails version - Rails 4.0.0 The latest today
 
-* Database - mysql db:sulake_development (see database.yml at /config for more)
+* Database - mysql 
 
 For more information contact Kibreab @ +358466000614
 
